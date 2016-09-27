@@ -1,0 +1,7 @@
+Forecast for: {{city}}
+<hr />
+Days: <a href="#/forecast/2" ng-class="{ 'bg-primary': days === '2' }">2</a> | <a href="#/forecast/5" ng-class="{ 'bg-primary': days === '5' }">5</a> | <a href="#/forecast/7" ng-class="{ 'bg-primary': days === '7' }">7</a>
+<hr />
+<div ng-repeat='res in results.list'>
+<forecast-directive res='res' convert-to-f='convertToF(res)' format-date='formatDate(dt)' format-str='EEEE MMM d, y'></forecast-directive>
+</div>
